@@ -1,11 +1,29 @@
 {% extends 'base.html' %}
 
 {% block body %}
-<h1>Hello World</h1>
+
+<table id="email_list" class="table table-striped table-bordered" style="width:100%">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>Sent</th>
+                <th>Last Sent</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for email in email_list %}
+                <tr>
+                    <td>{{ email.email }}</td>
+                    <td>{{ emai.send }}</td>
+                    <td>{{ email.last_send }}</td>
+            {% endfor %}
+        </tbody>
+    </table>
+
 {% endblock %}
 
 {% block js %}
 $(document).ready(function() {
-    $('#example').DataTable();
+    $('#email_list').DataTable();
 } );
 {% endblock %}
