@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<h1>Hello World</h1>
+{% endblock %}
+
+{% block js %}
+$(document).ready(function() {
+    $('#example').DataTable();
+} );
+{% endblock %}
