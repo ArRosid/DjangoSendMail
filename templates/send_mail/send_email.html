@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+  <h1>Send Email</h1>
+  <form class="mt-4" method="post">
+    {% csrf_token %}
+      <label>Number of email to send: </label>
+      <input type="text" name="email_count">
+      <button type="submit">Send</button>
+  </form>
+
+{% endblock %}

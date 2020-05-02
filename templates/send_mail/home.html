@@ -7,14 +7,17 @@
             <tr>
                 <th>Email</th>
                 <th>Sent</th>
+                <th>Added At</th>
                 <th>Last Sent</th>
+
             </tr>
         </thead>
         <tbody>
             {% for email in email_list %}
                 <tr>
                     <td>{{ email.email }}</td>
-                    <td>{{ emai.send }}</td>
+                    <td>{{ email.send }}</td>
+                    <td>{{ email.added_at }}</td>
                     <td>{{ email.last_send }}</td>
             {% endfor %}
         </tbody>
